@@ -1,1 +1,1 @@
-# Morita-seminar-Spring-2025-
+# Morita Seminar and Power reseach society
