@@ -52,30 +52,27 @@
       text-decoration: underline;
     }
 
-    #syllabus-links {
-      overflow: hidden;
-      max-height: 0;
-      transition: max-height 0.5s ease;
-      text-align: center;
-      background-color: #f4f1ee;
-    }
+   .submenu {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease;
+  background-color: #f4f1ee;
+  text-align: center;
+}
 
-    #syllabus-links.open {
-      max-height: 200px;
-    }
-
-    #syllabus-links a {
-      display: block;
-      padding: 10px 0;
-      color: #4f90b8;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    #syllabus-links a:hover {
-      text-decoration: underline;
-      background-color: #ece8e4;
-    }
+.submenu.open {
+  max-height: 200px; /* 必要に応じて調整 */
+}
+.submenu a {
+  display: block;
+  padding: 10px 0;
+  color: #4f90b8;
+  text-decoration: none;
+}
+.submenu a:hover {
+  background-color: #ece8e4;
+  text-decoration: underline;
+}
 
     main {
       max-width: 900px;
