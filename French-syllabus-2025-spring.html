@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>フランス語初級（協働レジュメ形式）学習会概要</title>
+  <title>フランス語初級学習会概要</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -51,14 +51,32 @@
 </head>
 <body>
  <div id="header-container"></div>
- <script>
+<script>
   fetch("header.html")
     .then(res => res.text())
     .then(html => {
-    document.getElementById("header-container").innerHTML = html;
+      document.getElementById("header-container").innerHTML = html;
+
+      // ↓ ヘッダー挿入後にイベントリスナーを設定する
+      const moritaToggle = document.getElementById('morita-toggle');
+      const pawaToggle = document.getElementById('pawa-toggle');
+      const moritaMenu = document.getElementById('morita-menu');
+      const pawaMenu = document.getElementById('pawa-menu');
+
+      if (moritaToggle && pawaToggle && moritaMenu && pawaMenu) {
+        moritaToggle.addEventListener('click', () => {
+          moritaMenu.classList.toggle('open');
+          pawaMenu.classList.remove('open');
+        });
+
+        pawaToggle.addEventListener('click', () => {
+          pawaMenu.classList.toggle('open');
+          moritaMenu.classList.remove('open');
+        });
+      }
     });
- </script>
-  <h1>フランス語初級（協働レジュメ形式）学習会</h1>
+</script>
+  <h1>フランス語初級学習会</h1>
 
   <h2>学習会の概要</h2>
   <p>
