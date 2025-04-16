@@ -109,43 +109,30 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>権力研究会／森田ゼミナール</h1>
-    <p>Power Research Society / Morita Seminar</p>
-  </header>
+ <div id="header-container"></div>
+  <script>
+    // ヘッダー読み込み
+    fetch("header.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("header-container").innerHTML = data;
 
-  <nav>
-    <a id="morita-toggle">森田ゼミナール</a>
-    <a id="pawa-toggle">ぱわ研</a>
-  </nav>
-  
- <!-- 森田ゼミナールメニュー -->
-  <div id="morita-menu" class="submenu">
-    <a href="syllabus-list.html">シラバス一覧</a>
-    <a href="#">過去レジュメ一覧</a>
-  </div>
+        // スライドメニューの動作を再定義
+        const moritaToggle = document.getElementById('morita-toggle');
+        const pawaToggle = document.getElementById('pawa-toggle');
+        const moritaMenu = document.getElementById('morita-menu');
+        const pawaMenu = document.getElementById('pawa-menu');
 
-  <!-- ぱわ研メニュー -->
-  <div id="pawa-menu" class="submenu">
-    <a href="project-list.html">企画一覧</a>
-    <a href="#">過去レジュメ一覧</a>
-  </div>
-  
-<script>
-    const moritaToggle = document.getElementById('morita-toggle');
-    const pawaToggle = document.getElementById('pawa-toggle');
-    const moritaMenu = document.getElementById('morita-menu');
-    const pawaMenu = document.getElementById('pawa-menu');
+        moritaToggle.addEventListener('click', () => {
+          moritaMenu.classList.toggle('open');
+          pawaMenu.classList.remove('open');
+        });
 
-    moritaToggle.addEventListener('click', () => {
-      moritaMenu.classList.toggle('open');
-      pawaMenu.classList.remove('open');
-    });
-
-    pawaToggle.addEventListener('click', () => {
-      pawaMenu.classList.toggle('open');
-      moritaMenu.classList.remove('open');
-    });
+        pawaToggle.addEventListener('click', () => {
+          pawaMenu.classList.toggle('open');
+          moritaMenu.classList.remove('open');
+        });
+      });
   </script>
 
   <main>
