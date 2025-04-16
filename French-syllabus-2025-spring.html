@@ -27,9 +27,55 @@
     th {
       background-color: #f0f0f0;
     }
+  .submenu {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease;
+  background-color: #f4f1ee;
+  text-align: center;
+}
+.submenu.open {
+  max-height: 200px;
+}
+.submenu a {
+  display: block;
+  padding: 10px 0;
+  color: #4f90b8;
+  text-decoration: none;
+}
+.submenu a:hover {
+  background-color: #ece8e4;
+  text-decoration: underline;
+}
   </style>
 </head>
 <body>
+  <div id="header-container"></div>
+
+  <script>
+    // ヘッダー読み込み
+    fetch("header.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("header-container").innerHTML = data;
+
+        // スライドメニューの動作を再定義
+        const moritaToggle = document.getElementById('morita-toggle');
+        const pawaToggle = document.getElementById('pawa-toggle');
+        const moritaMenu = document.getElementById('morita-menu');
+        const pawaMenu = document.getElementById('pawa-menu');
+
+        moritaToggle.addEventListener('click', () => {
+          moritaMenu.classList.toggle('open');
+          pawaMenu.classList.remove('open');
+        });
+
+        pawaToggle.addEventListener('click', () => {
+          pawaMenu.classList.toggle('open');
+          moritaMenu.classList.remove('open');
+        });
+      });
+  </script>
   <h1>フランス語初級（協働レジュメ形式）学習会</h1>
 
   <h2>学習会の概要</h2>
