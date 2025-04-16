@@ -4,35 +4,20 @@
   <meta charset="UTF-8">
   <title>企画一覧</title>
   <style>
-.submenu {
-  overflow: hidden;
-  max-height: 0;
-  transition: max-height 0.5s ease;
-  background-color: #f4f1ee;
-  text-align: center;
-}
-.submenu.open {
-  max-height: 200px;
-}
-.submenu a {
-  display: block;
-  padding: 10px 0;
-  color: #4f90b8;
-  text-decoration: none;
-}
-.submenu a:hover {
-  background-color: #ece8e4;
-  text-decoration: underline;
-}
     body {
       background-color: #f4f1ee;
       color: #222222;
       font-family: "Yu Gothic", "Helvetica Neue", sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+      font-weight: 400;
+    }
+
+    .content {
       max-width: 800px;
       margin: 40px auto;
       padding: 0 20px;
-      line-height: 1.8;
-      font-weight: 400;
     }
 
     h1 {
@@ -67,55 +52,80 @@
     li {
       margin-bottom: 12px;
     }
+
+    .submenu {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.5s ease;
+      background-color: #f4f1ee;
+      text-align: center;
+    }
+
+    .submenu.open {
+      max-height: 200px;
+    }
+
+    .submenu a {
+      display: block;
+      padding: 10px 0;
+      color: #4f90b8;
+      text-decoration: none;
+    }
+
+    .submenu a:hover {
+      background-color: #ece8e4;
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
- <div id="header-container"></div>
-<script>
-  fetch("header.html")
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById("header-container").innerHTML = html;
+  <div id="header-container"></div>
 
-      // ↓ ヘッダー挿入後にイベントリスナーを設定する
-      const moritaToggle = document.getElementById('morita-toggle');
-      const pawaToggle = document.getElementById('pawa-toggle');
-      const moritaMenu = document.getElementById('morita-menu');
-      const pawaMenu = document.getElementById('pawa-menu');
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("header-container").innerHTML = html;
 
-      if (moritaToggle && pawaToggle && moritaMenu && pawaMenu) {
-        moritaToggle.addEventListener('click', () => {
-          moritaMenu.classList.toggle('open');
-          pawaMenu.classList.remove('open');
-        });
+        const moritaToggle = document.getElementById('morita-toggle');
+        const pawaToggle = document.getElementById('pawa-toggle');
+        const moritaMenu = document.getElementById('morita-menu');
+        const pawaMenu = document.getElementById('pawa-menu');
 
-        pawaToggle.addEventListener('click', () => {
-          pawaMenu.classList.toggle('open');
-          moritaMenu.classList.remove('open');
-        });
-      }
-    });
-</script>
-  <h1>企画一覧</h1>
-  <p>以下のリンクから各年度の読書会の企画をご覧いただけます。</p>
-  
-  <h2>2025年度</h2>
-  <ul>
-    <li><a href="#">ネグリ＝ハート『帝国』読書会</a></li>
-　  <li><a href="French-syllabus-2025-spring">フランス語学習会（2025年度春夏学期）</a></li>
-  <!-- 他のシラバスが増えたらここに追加 -->
+        if (moritaToggle && pawaToggle && moritaMenu && pawaMenu) {
+          moritaToggle.addEventListener('click', () => {
+            moritaMenu.classList.toggle('open');
+            pawaMenu.classList.remove('open');
+          });
 
-  </ul>
-  <h2>2024年度</h2>
-  <ul>
-    <li>バトラー『権力の心的な生』読書会</li>
-    <li>ファノン『知に呪われたる者』（序文・第一章）読書会</li>
-    <li>『ホモ・サケル』『千のプラトー』『無為の共同体』一気読み企画</li>
-  </ul>
+          pawaToggle.addEventListener('click', () => {
+            pawaMenu.classList.toggle('open');
+            moritaMenu.classList.remove('open');
+          });
+        }
+      });
+  </script>
+
+  <div class="content">
+    <h1>企画一覧</h1>
+    <p>以下のリンクから各年度の読書会の企画をご覧いただけます。</p>
+
+    <h2>2025年度</h2>
+    <ul>
+      <li><a href="#">ネグリ＝ハート『帝国』読書会</a></li>
+      <li><a href="French-syllabus-2025-spring">フランス語学習会（2025年度春夏学期）</a></li>
+    </ul>
+
+    <h2>2024年度</h2>
+    <ul>
+      <li>バトラー『権力の心的な生』読書会</li>
+      <li>ファノン『知に呪われたる者』（序文・第一章）読書会</li>
+      <li>『ホモ・サケル』『千のプラトー』『無為の共同体』一気読み企画</li>
+    </ul>
+
+    <p style="text-align: right;">
+      <a href="index.html" style="color: #5c7a99; text-decoration: none;">&larr; ホームに戻る</a>
+    </p>
+  </div>
 </body>
-
-<p style="text-align: right;">
-  <a href="index.html" style="color: #5c7a99; text-decoration: none;">&larr; ホームに戻る</a>
-</p>
-
 </html>
