@@ -118,16 +118,38 @@
   </header>
 
   <nav>
-    <a href="index.html">ホーム</a>
-    <a id="syllabus-toggle">シラバス</a>
-    <a href="#">連絡先</a>
+    <a id="morita-toggle">森田ゼミナール</a>
+    <a id="pawa-toggle">ぱわ研</a>
   </nav>
-
-  <!-- ぬるっとスライドダウンするリンク群 -->
-  <div id="syllabus-links">
-    <a href="Morita-Seminar-2025-Spring-syllabus.html">森田ゼミナール</a>
-    <a href="Power-Study-Group-2025-Spring-syllabus.html">権力研究会</a>
+  
+ <!-- 森田ゼミナールメニュー -->
+  <div id="morita-menu" class="submenu">
+    <a href="Morita-Seminar-2025-Spring-syllabus.html">シラバス</a>
+    <a href="#">過去レジュメ一覧</a>
   </div>
+
+  <!-- ぱわ研メニュー -->
+  <div id="pawa-menu" class="submenu">
+    <a href="#">企画一覧</a>
+    <a href="#">過去レジュメ一覧</a>
+  </div>
+  
+<script>
+    const moritaToggle = document.getElementById('morita-toggle');
+    const pawaToggle = document.getElementById('pawa-toggle');
+    const moritaMenu = document.getElementById('morita-menu');
+    const pawaMenu = document.getElementById('pawa-menu');
+
+    moritaToggle.addEventListener('click', () => {
+      moritaMenu.classList.toggle('open');
+      pawaMenu.classList.remove('open');
+    });
+
+    pawaToggle.addEventListener('click', () => {
+      pawaMenu.classList.toggle('open');
+      moritaMenu.classList.remove('open');
+    });
+  </script>
 
   <main>
     <section>
@@ -165,15 +187,5 @@
   <footer>
     © 2025 Morita Seminar / Power Research Society
   </footer>
-
-  <!-- スライド機能のJavaScript -->
-  <script>
-    const toggle = document.getElementById('syllabus-toggle');
-    const syllabusLinks = document.getElementById('syllabus-links');
-
-    toggle.addEventListener('click', () => {
-      syllabusLinks.classList.toggle('open');
-    });
-  </script>
 </body>
 </html>
