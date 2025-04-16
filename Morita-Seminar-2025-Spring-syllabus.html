@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>2025年度 森田ゼミナール</title>
   <style>
-    /* --- 全体設定 --- */
     body {
       background-color: #f4f1ee;
       color: #222222;
@@ -21,7 +20,6 @@
       padding: 0 20px;
     }
 
-    /* --- 見出し --- */
     h1 {
       color: #5c7a99;
       border-bottom: 3px solid #888;
@@ -37,7 +35,6 @@
       font-weight: 600;
     }
 
-    /* --- リンク --- */
     a {
       color: #4f90b8;
       text-decoration: none;
@@ -47,7 +44,6 @@
       text-decoration: underline;
     }
 
-    /* --- 表組み --- */
     table {
       width: 100%;
       border-collapse: collapse;
@@ -69,7 +65,6 @@
       background-color: #f0f0f0;
     }
 
-    /* --- バイリンガル解説ブロック --- */
     .bilingual {
       background-color: #ece8e4;
       border-left: 4px solid #8ca0aa;
@@ -79,7 +74,6 @@
       color: #2c2c2c;
     }
 
-    /* --- 箇条書き --- */
     ul {
       margin-left: 20px;
       padding-left: 10px;
@@ -116,14 +110,12 @@
 </head>
 <body>
   <div id="header-container"></div>
-
   <script>
     fetch("header.html")
       .then(res => res.text())
       .then(html => {
         document.getElementById("header-container").innerHTML = html;
 
-        // ヘッダーの挿入後にイベントリスナーを設定
         const moritaToggle = document.getElementById('morita-toggle');
         const pawaToggle = document.getElementById('pawa-toggle');
         const moritaMenu = document.getElementById('morita-menu');
@@ -144,14 +136,114 @@
   </script>
 
   <div class="content">
-    <!-- ↓ここから中身を追加していく -->
+    <!-- ここから本文 -->
     <h1>森田ゼミナール：社会思想研究</h1>
-    <h2>ゼミの概要</h2>
-    <p>本ゼミでは...（以下略）</p>
 
-    <!-- 必要に応じて他のセクション・表・参考文献なども追加 -->
+    <h2>ゼミの概要</h2>
+    <p> 本ゼミでは、ドイツを中心とした社会学理論・社会思想の古典文献の輪読を行います。これまでに、ギデンズ、ハーバーマス、アーレント、シュトラウス、バトラー、ジジェク、ラカンなどを取り上げ、ゼミ生の関心も多岐にわたっています。今年度は「メディア論」・「批評」を中心テーマとし、ヴァルター・ベンヤミンの『ドイツ・ロマン主義における芸術批評の概念』および関連文献を講読予定です。</p>
+
+    <div class="bilingual">This seminar reads classic texts in sociological theory and social thought, with a focus on German traditions. While we primarily use Japanese translations, we refer to the original texts (mainly in German or English) when necessary. This year’s central theme is media theory and criticism, and we plan to read Walter Benjamin’s <i>The Concept of Art Criticism in German Romanticism</i> along with related works. </div>
+
+    <h2>到達目標</h2>
+    <ul>
+      <li>要約・批判技術を身につける。</li>
+      <li>理論の歴史的背景や他理論との関係を理解する。</li>
+      <li>他者の話を聞く力を養う。</li>
+    </ul>
+
+    <h2>文献・資料</h2>
+    <ul>
+      <li>ベンヤミン『ドイツ・ロマン主義における芸術批評の概念』</li>
+      <li>ベンヤミン『ベンヤミン・コレクションⅠ』</li>
+      <div class="bilingual">
+    　 <p>Benjamin, W. (1916=1977). Über die Sprache überhaupt und über die Sprache des Menschen:<i> Gesammelte Schriften Band II.1</i>, Suhrkamp: Frankfurt am Main.</p>
+    　 <p>Benjamin, W. (1935=1980) Das Kunstwerk im Zeitalter seiner technischen Reproduzierbarkeit (erster Fassung):<i> Gesammelte Schriften. Band I.2</i>, Suhrkamp: Frankfurt am Main.</p>
+  　 </div> 
+      <li>担当者によるレジュメ資料</li>
+    </ul>
+
+    <h2>進め方</h2>
+    <p>各回、担当者が範囲の要約と批評をレジュメにまとめ、15分程度で発表した後、全体でのディスカッションに移ります。</p>
+    <div class="bilingual">Each session begins with a student presentation based on a summary and critique of the assigned section. The presentation lasts about 15 minutes, followed by group discussion.</div>
+
+    <h2>ゼミの進め方</h2>
+ 　  <li> 発表者は、自分の担当範囲の文献を読み、その要点をレジュメにまとめます。また、レジュメの最後には、①読んでいて気になった点を整理するか、②自分の関心分野と関連づけてその文献の意味を考察する、などの短いコメントを添えてもらえると、ほかの人と議論がしやすくなります。</li>
+      <div class="bilingual">
+       Each presenter reads the assigned section of the text and summarizes its key points in a handout. At the end of the handout, it's helpful to include a short comment—such as (1) something that stood out or raised questions during reading, or (2) a brief reflection on how the text relates to your own academic interests. This makes it easier for others to join the discussion.
+      </div> 
+    <li>発表者以外の人も、あらかじめ議論したい点や気になった箇所を整理しておくと、議論に参加しやすくなり、理解も深まります。</li>
+      <div class="bilingual">
+       For those who are not presenting, it’s helpful to think in advance about points you’d like to discuss or questions that came up during the reading. This will make it easier to join the conversation and deepen your understanding.
+      </div>
+<h2>全14回の予定</h2>
+<table>
+  <tr>
+    <th>回</th>
+    <th>日付</th>
+    <th>内容</th>
+    <th>発表者</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>4/16 (Wed.)</td>
+    <td>ガイダンス・オリエンテーション</td>
+    <td>－</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>5/14 (Wed.)</td>
+    <td>『ドイツ・ロマン主義における芸術批評の概念』（序論＋第一部 Ⅰ・Ⅱ）</td>
+    <td>杉谷</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>5/28 (Wed.)</td>
+    <td>『ドイツ・ロマン主義における芸術批評の概念』（第一部 Ⅲ・Ⅳ）</td>
+    <td>松原</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>6/11 (Wed.)</td>
+    <td>『ドイツ・ロマン主義における芸術批評の概念』（第二部 Ⅰ・Ⅱ）</td>
+    <td>江郷</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>6/25 (Wed.)</td>
+    <td>『ドイツ・ロマン主義における芸術批評の概念』（第二部 Ⅲ）</td>
+    <td>中川</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>7/9 (Wed.)</td>
+    <td>「言語一般および人間の言語について」（『ベンヤミン・コレクションⅠ』所収）</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>7/23 (Wed.)</td>
+    <td>「複製技術時代の芸術作品」（同上）</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>7/30 (Wed.)</td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+ <h2>参考文献</h2>
+  <ul>
+    <li>Menninghaus, Winfried. (1995) <i>Walter Benjamins Theorie der Sprachmagie</i>, Suhrkamp. </li>
+    <li>キットラー，フリードリヒ (2006)『グラモフォン・フィルム・タイプライター（上）（下）』（石光泰夫・石光輝子訳）岩波文庫.</li>
+     <li>シュレーゲル，フリードリヒ (2025)『断片集』（武田利勝訳）岩波文庫.</li>
+    <li>多木浩二 (2000)『ベンヤミン「複製技術時代の芸術作品」精読』岩波現代文庫.</li>
+    <li>三島憲一 (2019)『ベンヤミン：破壊・収集・記憶』岩波現代文庫.</li>
+    <li>森田数実（2014/2015/2017）「「翻訳」についての一考察(1)(2)(3)」『東京学芸大学紀要 人文社会科学系Ⅱ』 (65)(66)(68).</li>   
+  </ul>
+
     <p style="text-align: right;">
-      <a href="index.html" style="color: #5c7a99; text-decoration: none;">&larr; ホームに戻る</a>
+      <a href="index.html">&larr; ホームに戻る</a>
     </p>
   </div>
 </body>
