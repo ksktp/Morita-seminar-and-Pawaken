@@ -8,8 +8,6 @@
       background-color: #f4f1ee;
       color: #222222;
       font-family: "Yu Gothic", "Helvetica Neue", sans-serif;
-      max-width: 800px;
-      margin: 40px auto;
       padding: 0 20px;
       line-height: 1.8;
       font-weight: 400;
@@ -47,6 +45,11 @@
     li {
       margin-bottom: 12px;
     }
+    .content {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
     .submenu {
   overflow: hidden;
   max-height: 0;
@@ -70,7 +73,7 @@
   </style>
 </head>
 <body>
-    <div id="header-container"></div>
+ <div id="header-container"></div>
 
 <script>
   fetch("header.html")
@@ -97,6 +100,7 @@
       }
     });
 </script>
+<div class="content">
   <h1>シラバス一覧</h1>
   <p>以下のリンクから各年度のシラバスをご覧いただけます。</p>
   
@@ -116,7 +120,7 @@
 <p style="text-align: right;">
   <a href="index.html" style="color: #5c7a99; text-decoration: none;">&larr; ホームに戻る</a>
 </p>
-
+</div>
 </html>
 
   
