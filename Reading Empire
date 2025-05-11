@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ネグリ＝ハート『帝国』読書会</title>
+  <style>
+    body {
+      background-color: #f4f1ee;
+      color: #222222;
+      font-family: "Yu Gothic", "Helvetica Neue", sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+      font-weight: 400;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h1 {
+      color: #5c7a99;
+      border-bottom: 3px solid #888;
+      padding-bottom: 8px;
+      font-weight: 600;
+      text-align: center; /* ← 追加 */
+    }
+
+    h2 {
+      color: #6d8a6e;
+      border-bottom: 2px solid #aaa;
+      margin-top: 40px;
+      padding-bottom: 5px;
+      font-weight: 600;
+    }
+
+    a {
+      color: #4f90b8;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+    }
+
+    th, td {
+      border: 1px solid #bbb;
+      padding: 10px;
+      color: #222222;
+    }
+
+    th {
+      background-color: #d3d8dc;
+      font-weight: 600;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f0f0f0;
+    }
+
+    .bilingual {
+      background-color: #ece8e4;
+      border-left: 4px solid #8ca0aa;
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 0.95em;
+      color: #2c2c2c;
+    }
+
+    ul {
+      margin-left: 20px;
+      padding-left: 10px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .submenu {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.5s ease;
+      background-color: #f4f1ee;
+      text-align: center;
+    }
+
+    .submenu.open {
+      max-height: 200px;
+    }
+
+    .submenu a {
+      display: block;
+      padding: 10px 0;
+      color: #4f90b8;
+      text-decoration: none;
+    }
+
+    .submenu a:hover {
+      background-color: #ece8e4;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div id="header-container"></div>
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("header-container").innerHTML = html;
+
+        const moritaToggle = document.getElementById('morita-toggle');
+        const pawaToggle = document.getElementById('pawa-toggle');
+        const moritaMenu = document.getElementById('morita-menu');
+        const pawaMenu = document.getElementById('pawa-menu');
+
+        if (moritaToggle && pawaToggle && moritaMenu && pawaMenu) {
+          moritaToggle.addEventListener('click', () => {
+            moritaMenu.classList.toggle('open');
+            pawaMenu.classList.remove('open');
+          });
+
+          pawaToggle.addEventListener('click', () => {
+            pawaMenu.classList.toggle('open');
+            moritaMenu.classList.remove('open');
+          });
+        }
+      });
+  </script>
+
+  <div class="content">
+    <!-- ここから本文 -->
+    <h1>2025年度春夏学期　『帝国』読書会　日程</h1>
+
+    <h2>文献・資料</h2>
+    <ul>
+      <li>マイケル・ハート／アントニオ＝ネグリ『帝国』（水嶋一憲、酒井隆史、浜邦彦、吉田俊実 訳、2003、以文社）</li>
+      <li>レジュメ資料があったりなかったり。</li>
+    </ul>
+
+    <h2>進め方</h2>
+    <p>各回、やる気のある人が当該範囲の要約と批評をレジュメにまとめ、少ししゃべった後、全体でのディスカッションに移ります。</p>
+    <div class="bilingual">Each time, someone who’s motivated puts together a short summary and critique of the reading, gives a quick intro, and then we dive into group discussion.</div>
+
+    <h2>ゼミの進め方</h2>
+ 　  <li> 発表者は、自分の担当範囲の文献を読み、その要点をレジュメにまとめます。また、レジュメの最後には、①読んでいて気になった点を整理するか、②自分の関心分野と関連づけてその文献の意味を考察する、などの短いコメントを添えてもらえると、ほかの人と議論がしやすくなります。</li>
+      <div class="bilingual">
+       Each presenter reads the assigned section of the text and summarizes its key points in a handout. At the end of the handout, it's helpful to include a short comment—such as (1) something that stood out or raised questions during reading, or (2) a brief reflection on how the text relates to your own academic interests. This makes it easier for others to join the discussion.
+      </div> 
+    <li>発表者以外の人も、あらかじめ議論したい点や気になった箇所を整理しておくと、議論に参加しやすくなり、理解も深まります。</li>
+      <div class="bilingual">
+       For those who are not presenting, it’s helpful to think in advance about points you’d like to discuss or questions that came up during the reading. This will make it easier to join the conversation and deepen your understanding.
+      </div>
+<h2>全14回の予定</h2>
+<table>
+  <tr>
+    <th>回</th>
+    <th>日付</th>
+    <th>内容</th>
+    <th>発表者</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>4/16 (Wed.)</td>
+    <td>ガイダンス・オリエンテーション</td>
+    <td>－</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>5/14 (Wed.)</td>
+    <td>『ドイツ・ロマン主義における芸術批評の概念』（序論＋第一部 Ⅰ・Ⅱ）</td>
+    <td>杉谷</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>5/28 (Wed.)</td>
+    <td>『ドイツ・ロマン主義における芸術批評の概念』（第一部 Ⅲ・Ⅳ）</td>
+    <td>松原</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>6/11 (Wed.)</td>
+    <td>『ドイツ・ロマン主義における芸術批評の概念』（第二部 Ⅰ・Ⅱ）</td>
+    <td>江郷</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>6/25 (Wed.)</td>
+    <td>『ドイツ・ロマン主義における芸術批評の概念』（第二部 Ⅲ）</td>
+    <td>中川</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>7/9 (Wed.)</td>
+    <td>「言語一般および人間の言語について」（『ベンヤミン・コレクションⅠ』所収）</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>7/23 (Wed.)</td>
+    <td>「複製技術時代の芸術作品」（同上）</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>7/30 (Wed.)</td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+ <h2>参考文献</h2>
+  <ul>
+　　<li>西谷 修/酒井 直樹/遠藤 乾/市田 良彦/酒井 隆史ほか（2005）『非対称化する世界：『“帝国”』の射程』（以文社）</li>
+    <li>『現代思想2024年5月臨時増刊号　総特集＝アントニオ・ネグリ』（2024、青土社）</li>
+  </ul>
+
+    <p style="text-align: right;">
+      <a href="index.html">&larr; ホームに戻る</a>
+    </p>
+  </div>
+</body>
+</html>
