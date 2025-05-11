@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>シラバス一覧</title>
+  <style>
+    body {
+      background-color: #f4f1ee;
+      color: #222222;
+      font-family: "Yu Gothic", "Helvetica Neue", sans-serif;
+      padding: 0;
+      margin: 0;
+      line-height: 1.8;
+      font-weight: 400;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h1 {
+      color: #5c7a99;
+      border-bottom: 3px solid #888;
+      padding-bottom: 8px;
+      font-weight: 600;
+    }
+
+    h2 {
+      color: #6d8a6e;
+      border-bottom: 2px solid #aaa;
+      margin-top: 40px;
+      padding-bottom: 5px;
+      font-weight: 600;
+    }
+
+    a {
+      color: #4f90b8;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    ul {
+      margin-left: 20px;
+      padding-left: 10px;
+    }
+
+    li {
+      margin-bottom: 12px;
+    }
+
+    .submenu {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.5s ease;
+      background-color: #f4f1ee;
+      text-align: center;
+    }
+
+    .submenu.open {
+      max-height: 200px;
+    }
+
+    .submenu a {
+      display: block;
+      padding: 10px 0;
+      color: #4f90b8;
+      text-decoration: none;
+    }
+
+    .submenu a:hover {
+      background-color: #ece8e4;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div id="header-container"></div>
+
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("header-container").innerHTML = html;
+
+        const moritaToggle = document.getElementById('morita-toggle');
+        const pawaToggle = document.getElementById('pawa-toggle');
+        const moritaMenu = document.getElementById('morita-menu');
+        const pawaMenu = document.getElementById('pawa-menu');
+
+        if (moritaToggle && pawaToggle && moritaMenu && pawaMenu) {
+          moritaToggle.addEventListener('click', () => {
+            moritaMenu.classList.toggle('open');
+            pawaMenu.classList.remove('open');
+          });
+
+          pawaToggle.addEventListener('click', () => {
+            pawaMenu.classList.toggle('open');
+            moritaMenu.classList.remove('open');
+          });
+        }
+      });
+  </script>
+
+  <div class="content">
+    <h1>過去レジュメ一覧</h1>
+    <p>以下のリンクから過去の読書会で使用したレジュメをご覧いただけます。</p>
+
+　　<h2>2024年度　秋学期</h2>
+    <ul>
+      <li><a href="https://drive.google.com/drive/folders/15cUVxFosSNGNo7bimIi7ypPHJsiGO6vS?usp=sharing">ジャック・ラカン『精神分析の四基本概念』</a></li>
+    </ul>
+　　<h2>2024年度　春学期</h2>
+    <ul>
+      <li><a href="https://drive.google.com/drive/folders/13i2w8GHjBVEstIBcqFRb04fhQ7ftoEEv?usp=sharing">スラヴォイ・ジジェク『イデオロギーの崇高な概念』</a></li>
+    </ul>
+　　<h2>2023年度　通年</h2>
+    <ul>
+      <li><a href="#">ニクラス・ルーマン『情熱としての愛』</a></li>
+    </ul>
+    <h2>2022年度　秋学期</h2>
+    <ul>
+      <li><a href="https://drive.google.com/drive/folders/17jtDCXTsWb6kitxAAhV2kB7ObNu-E4RS?usp=sharing">マックス・ホルクハイマー／テオドール・アドルノ『啓蒙の弁証法』</a></li>
+    </ul>
+    <h2>2022年度　春学期</h2>
+    <ul>
+      <li><a href="https://drive.google.com/drive/folders/1T3VZH0jD-YskXYYfxkUA0jpBj5qM6BbH?usp=sharing">レオ・シュトラウス『ホッブズの政治学』</a></li>
+    </ul>
+    <h2>2021年度　秋学期</h2>
+    <ul>
+      <li><a href="https://drive.google.com/drive/folders/1T3VZH0jD-YskXYYfxkUA0jpBj5qM6BbH?usp=sharing">ジュディス・バトラー『問題＝物質となる身体』</a></li>
+    </ul>
+　　<h2>2021年度　春学期</h2>
+    <ul>
+      <li><a href="https://drive.google.com/drive/folders/12Qnlncks-fL6tr2iZEHRm89Gw5F37R5T?usp=drive_link">ユルゲン・ハーバーマス『近代の哲学的ディスクルス』</a></li>
+    </ul>
+
+
+    <p style="text-align: right;">
+      <a href="index.html" style="color: #5c7a99; text-decoration: none;">&larr; ホームに戻る</a>
+    </p>
+  </div>
+</body>
+</html>
