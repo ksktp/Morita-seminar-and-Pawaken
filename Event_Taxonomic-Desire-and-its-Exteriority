@@ -2,114 +2,131 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>International Workshop「Taxonomic Desire and its Exteriority」</title>
+  <title>International Workshop: Taxonomic Desire and its Exteriority</title>
   <style>
     body {
-      font-family: "Helvetica Neue", sans-serif;
+      background-color: #f4f1ee;
+      color: #222222;
+      font-family: "Yu Gothic", "Helvetica Neue", sans-serif;
       margin: 0;
       padding: 0;
       line-height: 1.8;
-      color: #333;
-      background: #f9f9f9;
     }
-    .container {
+    .content {
       max-width: 800px;
-      margin: auto;
-      padding: 2rem;
-      background: #fff;
+      margin: 40px auto;
+      padding: 0 20px;
     }
     h1 {
-      font-size: 1.8rem;
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 0.5rem;
+      color: #5c7a99;
+      border-bottom: 3px solid #888;
+      padding-bottom: 8px;
+      font-weight: 600;
+      text-align: center;
     }
     h2 {
-      margin-top: 2rem;
-      font-size: 1.4rem;
+      color: #6d8a6e;
+      border-bottom: 2px solid #aaa;
+      margin-top: 40px;
+      padding-bottom: 5px;
+      font-weight: 600;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+    }
+    th, td {
+      border: 1px solid #bbb;
+      padding: 10px;
+    }
+    th {
+      background-color: #d3d8dc;
+      font-weight: 600;
+      text-align: center;
+    }
+    td {
+      text-align: center;
+    }
+    tr:nth-child(even) {
+      background-color: #f0f0f0;
     }
     ul {
-      padding-left: 1.2rem;
-    }
-    .section {
-      margin-top: 2rem;
-    }
-    .label {
-      font-weight: bold;
+      margin-left: 20px;
+      padding-left: 10px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>International Workshop「Taxonomic Desire and its Exteriority —— 徳田匡『〈沖縄学〉の認識論的条件』をめぐって」</h1>
+  <div class="content">
+    <h1>International Workshop「Taxonomic Desire and its Exteriority——徳田匡『〈沖縄学〉の認識論的条件』をめぐって」</h1>
 
-    <div class="section">
-      <p><span class="label">開催日：</span>2024年8月27日（火）</p>
-      <p><span class="label">時間：</span>13:00～17:00</p>
-      <p><span class="label">会場：</span>琉球大学 人文社会学部棟（教室番号は後日案内）およびZoomによるオンライン配信</p>
-      <p><span class="label">主催：</span>○○ゼミ／琉球大学人文社会学部</p>
-    </div>
+    <h2>講師</h2>
+    <p>徳田 匡（東京経済大学 非常勤講師）</p>
 
-    <div class="section">
-      <h2>イベント概要</h2>
-      <p>
-        本ワークショップでは、徳田匡氏の著作『〈沖縄学〉の認識論的条件』（以文社、2024年）を手がかりに、「分類する欲望」とその制度化の力学、そしてその外部に位置づけられる知の可能性について検討します。
-      </p>
-      <p>
-        第一部では、修士・博士課程の大学院生による研究発表とそれに対するコメントを通じて、帝国とローカリティの交差する諸相を浮かび上がらせます。
-        第二部では、同書の内容を起点とする徳田氏によるレクチャーと、それに対する多角的なコメントを通じて、認識論的帝国の解体に向けた批判的思考の射程を探ります。
-      </p>
-    </div>
+    <h2>第二部コメンテーター</h2>
+    <ul>
+      <li>新城 郁夫（琉球大学 人文社会学部 教授）</li>
+      <li>阿部 小涼（琉球大学 人文社会学部 教授）</li>
+      <li>井上 間従文（一橋大学 言語社会研究科 准教授）</li>
+    </ul>
 
-    <div class="section">
-      <h2>プログラム</h2>
-      <ul>
-        <li>13:00～13:15　趣旨説明</li>
-        <li>13:15～14:00　院生による研究発表（前半）</li>
-        <li>14:00～14:15　第一部コメンテーターによるコメント</li>
-        <li>14:15～14:20　休憩</li>
-        <li>14:20～14:50　院生による研究発表（後半）</li>
-        <li>14:50～15:05　第一部コメンテーターによるコメント</li>
-        <li>15:05～15:10　休憩</li>
-        <li>15:10～16:30　徳田匡氏によるレクチャー</li>
-        <li>16:30～17:00　第二部コメンテーターによるコメント</li>
-      </ul>
-    </div>
+    <h2>プログラム</h2>
+    <table>
+      <tr>
+        <th>時間</th>
+        <th>内容</th>
+      </tr>
+      <tr>
+        <td>13:00～13:15</td>
+        <td>趣旨説明</td>
+      </tr>
+      <tr>
+        <td>13:15～14:00</td>
+        <td>院生による研究発表（前半）</td>
+      </tr>
+      <tr>
+        <td>14:00～14:15</td>
+        <td>第一部コメンテーターによるコメント</td>
+      </tr>
+      <tr>
+        <td>14:15～14:20</td>
+        <td>休憩</td>
+      </tr>
+      <tr>
+        <td>14:20～14:50</td>
+        <td>院生による研究発表（後半）</td>
+      </tr>
+      <tr>
+        <td>14:50～15:05</td>
+        <td>第一部コメンテーターによるコメント</td>
+      </tr>
+      <tr>
+        <td>15:05～15:10</td>
+        <td>休憩</td>
+      </tr>
+      <tr>
+        <td>15:10～16:30</td>
+        <td>徳田さんによるレクチャー</td>
+      </tr>
+      <tr>
+        <td>16:30～17:00</td>
+        <td>第二部コメンテーターによるコメント</td>
+      </tr>
+    </table>
 
-    <div class="section">
-      <h2>講師</h2>
-      <p><span class="label">徳田 匡 氏</span>（東京経済大学 非常勤講師）<br>
-        著書：『〈沖縄学〉の認識論的条件』（以文社、2024年）</p>
-    </div>
+    <h2>対象者</h2>
+    <p>学生、教職員、一般</p>
 
-    <div class="section">
-      <h2>第二部コメンテーター</h2>
-      <ul>
-        <li>新城 郁夫 氏（琉球大学 人文社会学部 教授）</li>
-        <li>阿部 小涼 氏（琉球大学 人文社会学部 教授）</li>
-        <li>井上 間従文 氏（一橋大学 言語社会研究科 准教授）</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>参加対象</h2>
-      <p>学生、教職員、一般</p>
-
-      <h2>参加費</h2>
-      <p>無料</p>
-
-      <h2>参加方法</h2>
-      <p>
-        <span class="label">対面参加：</span>事前申込不要<br>
-        <span class="label">オンライン参加：</span>要事前申込（Zoomリンクは申込者に別途送付）
-      </p>
-
-      <h2>申込締切</h2>
-      <p>2024年9月12日（木）</p>
-      <p>以下のフォームよりお申し込みください：<br>
-        <a href="#">[参加申込フォームはこちら]</a>
-      </p>
-    </div>
+    <h2>参加方法</h2>
+    <ul>
+      <li>参加費：無料</li>
+      <li>対面参加：事前申し込み不要</li>
+      <li>オンライン参加：事前申し込みが必要です（以下のサイトよりお申込みください）</li>
+    </ul>
+    <p><strong>以下のGoogle Formよりお申込みください。</p>
+    <p><a href="https://docs.google.com/forms/d/1NTHIn56N9cWpLJAlE2zDc_D1TC9-3KHDPhWD3ASADSE/viewform?edit_requested=true">徳田匡『〈沖縄学〉の認識論的条件』研究会参加申し込みフォーム</a></p>
+    <p style="text-align: right;"><a href="index.html">← ホームに戻る</a></p>
   </div>
 </body>
 </html>
