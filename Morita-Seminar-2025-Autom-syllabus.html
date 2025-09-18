@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>2025年度 森田ゼミナール</title>
+  <style>
+    body {
+      background-color: #f4f1ee;
+      color: #222222;
+      font-family: "Yu Gothic", "Helvetica Neue", sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+      font-weight: 400;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h1 {
+      color: #5c7a99;
+      border-bottom: 3px solid #888;
+      padding-bottom: 8px;
+      font-weight: 600;
+      text-align: center; /* ← 追加 */
+    }
+
+    h2 {
+      color: #6d8a6e;
+      border-bottom: 2px solid #aaa;
+      margin-top: 40px;
+      padding-bottom: 5px;
+      font-weight: 600;
+    }
+
+    a {
+      color: #4f90b8;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+    }
+
+    th, td {
+      border: 1px solid #bbb;
+      padding: 10px;
+      color: #222222;
+    }
+
+    th {
+      background-color: #d3d8dc;
+      font-weight: 600;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f0f0f0;
+    }
+
+    .bilingual {
+      background-color: #ece8e4;
+      border-left: 4px solid #8ca0aa;
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 0.95em;
+      color: #2c2c2c;
+    }
+
+    ul {
+      margin-left: 20px;
+      padding-left: 10px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .submenu {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.5s ease;
+      background-color: #f4f1ee;
+      text-align: center;
+    }
+
+    .submenu.open {
+      max-height: 200px;
+    }
+
+    .submenu a {
+      display: block;
+      padding: 10px 0;
+      color: #4f90b8;
+      text-decoration: none;
+    }
+
+    .submenu a:hover {
+      background-color: #ece8e4;
+      text-decoration: underline;
+    }
+    .back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #4f90b8;
+  background-color: #f4f1ee;
+  color: #4f90b8;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: 600;
+}
+
+.back-button:hover {
+  background-color: #4f90b8;
+  color: #ffffff;
+}
+  </style>
+</head>
+<body>
+  <div id="header-container"></div>
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("header-container").innerHTML = html;
+
+        const moritaToggle = document.getElementById('morita-toggle');
+        const pawaToggle = document.getElementById('pawa-toggle');
+        const moritaMenu = document.getElementById('morita-menu');
+        const pawaMenu = document.getElementById('pawa-menu');
+
+        if (moritaToggle && pawaToggle && moritaMenu && pawaMenu) {
+          moritaToggle.addEventListener('click', () => {
+            moritaMenu.classList.toggle('open');
+            pawaMenu.classList.remove('open');
+          });
+
+          pawaToggle.addEventListener('click', () => {
+            pawaMenu.classList.toggle('open');
+            moritaMenu.classList.remove('open');
+          });
+        }
+      });
+  </script>
+
+  <div class="content">
+    <!-- ここから本文 -->
+    <h1>2025年　秋冬学期　森田ゼミナール　シラバス</h1>
+
+    <h2>ゼミの概要</h2>
+    <p> 本ゼミでは、ドイツを中心とした社会学理論・社会思想の古典文献の輪読を行います。これまでに、ギデンズ、ハーバーマス、アーレント、シュトラウス、バトラー、ジジェク、ラカンなどを取り上げ、ゼミ生の関心も多岐にわたっています。今年度は「メディア論」・「批評」を中心テーマとし、今学期はベンヤミン・コレクションからいくつかの文献を講読予定です。</p>
+
+    <div class="bilingual">In this seminar, we conduct close readings of classic works in sociological theory and social thought, with a focus on German scholarship. In the past, we have studied authors such as Giddens, Habermas, Arendt, Strauss, Butler, Žižek, and Lacan, reflecting the wide range of interests among our members. This year, our central themes are media theory and criticism, and for this semester we plan to read selected texts from the Benjamin Collection. </div>
+
+    <h2>到達目標</h2>
+    <ul>
+      <li>要約・批判技術を身につける。</li>
+      <li>理論の歴史的背景や他理論との関係を理解する。</li>
+      <li>他者の話を聞く力を養う。</li>
+    </ul>
+
+    <h2>文献・資料</h2>
+    <ul>
+      <li>「言語一般および人間の言語について」（『ベンヤミン・コレクション Ⅰ』：7-36頁）</li>
+      <li>「アレゴリーとバロック悲劇」（『ベンヤミン・コレクション Ⅰ』：187-322頁）</li>
+      <li>「複製技術時代の芸術作品」（『ベンヤミン・コレクション Ⅰ』：583-640頁）</li>
+      <li>「歴史の概念について」（『ベンヤミン・コレクション Ⅰ』：643-663頁）</li>
+      <li>担当者によるレジュメ資料</li>
+    </ul>
+
+    <h2>進め方</h2>
+    <p>各回、担当者が範囲の要約と批評をレジュメにまとめ、15分程度で発表した後、全体でのディスカッションに移ります。</p>
+    <div class="bilingual">Each session begins with a student presentation based on a summary and critique of the assigned section. The presentation lasts about 15 minutes, followed by group discussion.</div>
+
+    <h2>ゼミの進め方</h2>
+ 　  <li> 発表者は、自分の担当範囲の文献を読み、その要点をレジュメにまとめます。また、レジュメの最後には、①読んでいて気になった点を整理するか、②自分の関心分野と関連づけてその文献の意味を考察する、などの短いコメントを添えてもらえると、ほかの人と議論がしやすくなります。</li>
+      <div class="bilingual">
+       Each presenter reads the assigned section of the text and summarizes its key points in a handout. At the end of the handout, it's helpful to include a short comment—such as (1) something that stood out or raised questions during reading, or (2) a brief reflection on how the text relates to your own academic interests. This makes it easier for others to join the discussion.
+      </div> 
+    <li>発表者以外の人も、あらかじめ議論したい点や気になった箇所を整理しておくと、議論に参加しやすくなり、理解も深まります。</li>
+      <div class="bilingual">
+       For those who are not presenting, it’s helpful to think in advance about points you’d like to discuss or questions that came up during the reading. This will make it easier to join the conversation and deepen your understanding.
+      </div>
+<h2>全14回の予定</h2>
+<table>
+  <tr>
+    <th>回</th>
+    <th>日付</th>
+    <th>内容</th>
+    <th>発表者</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>9/17 (Wed.)</td>
+    <td>ガイダンス・オリエンテーション</td>
+    <td>－</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>10/01 (Wed.)</td>
+    <td>「言語一般および人間の言語について」</td>
+    <td>杉谷</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>10/15 (Wed.)</td>
+    <td>『ドイツ・ロマン主義における芸術批評の概念』（第１部 Ⅲ）</td>
+    <td>松原</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>10/29 (Wed.)</td>
+    <td>『ドイツ・ロマン主義における芸術批評の概念』（第１部 Ⅳ）</td>
+    <td>松原</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>11/12 (Wed.)</td>
+    <td>『ドイツ・ロマン主義における芸術批評の概念』（第２部 Ⅰ）</td>
+    <td>中川</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>11/26 (Wed.)</td>
+    <td>『ドイツ・ロマン主義における芸術批評の概念』（第２部 Ⅱ／Ⅲ）</td>
+    <td>中川／古本</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>12/10 (Wed.)</td>
+    <td>Fr.シュレーゲル「ゲーテの『マイスター』について」</td>
+    <td>？</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>12/24 (Wed.)</td>
+    <td>クリスマス・パーティ！</td>
+    <td>？</td>
+  </tr>
+</table>
+
+<h2>参考文献</h2>
+<section aria-labelledby="cat-primary">
+  <h3 id="cat-primary">ベンヤミン翻訳書</h3>
+  <ul>
+   <li>浅井健二郎 訳（1999）『ドイツ悲劇の根源 (上)（下）』筑摩書房（ちくま学芸文庫）。</li>
+   <li>浅井健二郎 訳（2001）『ドイツ・ロマン主義における芸術批評の概念』筑摩書房（ちくま学芸文庫）。</li>
+   <li>山口裕之 訳（2011）『ベンヤミン・アンソロジー』河出書房新社（河出文庫）。</li>
+   <li>山口裕之 訳（2021）『ベンヤミン メディア・芸術論集』河出書房新社（河出文庫）。</li>
+   <li>鹿島徹 編/訳（2015）『［新訳・評注］歴史の概念について』［ジョルジョ・アガンベン手稿底本］未來社。</li>
+   <li>柿木伸之 訳（2021）「歴史の概念について」，『断絶からの歴史』所収［ハンナ・アーレント手稿底本］。</li>
+  </ul>
+</section>
+
+<section aria-labelledby="cat-intro">
+  <h3 id="cat-intro">ベンヤミン思想概説書</h3>
+  <ul>
+    <li>三島憲一（2019）『ベンヤミン：破壊・収集・記憶』岩波書店（岩波現代文庫）。</li>
+    <li>柿木伸之（2019）『ヴァルター・ベンヤミン：闇を歩く批評』岩波書店（岩波新書）。</li>
+  </ul>
+</section>
+
+<section aria-labelledby="cat-language">
+  <h3 id="cat-language">言語哲学・翻訳論</h3>
+  <ul>
+    <li>細見和之（2009）『ベンヤミン「言語一般および人間の言語について」を読む：言語と語りえぬもの』岩波書店。</li>
+    <li>柿木伸之（2014）『ベンヤミンの言語哲学：翻訳としての言語、想起からの歴史』岩波書店。</li>
+    <li>森田数実（2014／2015／2017）「『翻訳』についての一考察 (1)(2)(3)」『東京学芸大学紀要 人文社会科学系Ⅱ』(65)(66)(68)。</li>
+    <li>Menninghaus, Winfried. (1995) <i>Walter Benjamins Theorie der Sprachmagie</i>, Suhrkamp.</li>
+  </ul>
+</section>
+
+<section aria-labelledby="cat-crit-history">
+  <h3 id="cat-crit-history">歴史哲学・メディア論</h3>
+  <ul>    
+    <li>多木浩二（2000）『ベンヤミン「複製技術時代の芸術作品」精読』岩波書店（岩波現代文庫）。</li>
+    <li>柿木伸之（2021）『断絶からの歴史：ベンヤミンの歴史哲学』岩波書店。</li>
+    <li>キットラー，フリードリヒ（2006）『グラモフォン・フィルム・タイプライター（上）（下）』（石光泰夫・石光輝子訳）岩波書店（岩波文庫）。</li>
+  </ul>
+</section>
+  
+<p style="text-align: right;">
+  <a href="index.html" class="back-button">ホームへ戻る</a>
+</p>
+  </div>
+</body>
+</html>
