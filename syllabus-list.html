@@ -2,148 +2,329 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>Syllabus</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>シラバス一覧 | 森田ゼミナール</title>
   <style>
+    :root {
+      --paper: #f4f1ee;
+      --surface: #fffdfb;
+      --ink: #222222;
+      --muted: #626963;
+      --blue: #355d78;
+      --green: #49674e;
+      --line: #d8d7d0;
+    }
+
     body {
-      background-color: #f4f1ee;
-      color: #222222;
-      font-family: "Yu Gothic", "Helvetica Neue", sans-serif;
-      padding: 0;
       margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", "Meiryo", "Helvetica Neue", sans-serif;
       line-height: 1.8;
-      font-weight: 400;
     }
 
-    .content {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    h1 {
-      color: #5c7a99;
-      border-bottom: 3px solid #888;
-      padding-bottom: 8px;
-      font-weight: 600;
-    }
-
-    h2 {
-      color: #6d8a6e;
-      border-bottom: 2px solid #aaa;
-      margin-top: 40px;
-      padding-bottom: 5px;
-      font-weight: 600;
-    }
-
-    a {
-      color: #4f90b8;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    ul {
-      margin-left: 20px;
-      padding-left: 10px;
-    }
-
-    li {
-      margin-bottom: 12px;
-    }
-
+    /* 共通ヘッダー */
     .submenu {
-      overflow: hidden;
-      max-height: 0;
-      transition: max-height 0.5s ease;
-      background-color: #f4f1ee;
+      display: none;
+      background-color: var(--paper);
       text-align: center;
     }
-
-    .submenu.open {
-      max-height: 200px;
-    }
-
+    .submenu.open { display: block; }
     .submenu a {
       display: block;
       padding: 10px 0;
-      color: #4f90b8;
+      color: var(--blue);
       text-decoration: none;
     }
-
     .submenu a:hover {
       background-color: #ece8e4;
       text-decoration: underline;
     }
-    .back-button {
-  display: inline-block;
-  padding: 10px 20px;
-  border: 2px solid #4f90b8;
-  background-color: #f4f1ee;
-  color: #4f90b8;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  font-weight: 600;
-}
 
-.back-button:hover {
-  background-color: #4f90b8;
-  color: #ffffff;
-}
+    /* シラバス一覧 */
+    .syllabus, .syllabus * { box-sizing: border-box; }
+    .syllabus {
+      max-width: 880px;
+      margin: 48px auto 64px;
+      padding: 0 24px;
+    }
+    .syllabus-intro {
+      border-bottom: 2px solid #8ca0aa;
+      padding-bottom: 22px;
+      margin-bottom: 32px;
+    }
+    .syllabus-eyebrow {
+      margin: 0 0 5px;
+      color: var(--blue);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+    }
+    .syllabus h1 {
+      margin: 0 0 10px;
+      color: var(--blue);
+      font-size: clamp(1.65rem, 4.5vw, 2.2rem);
+      line-height: 1.4;
+      font-weight: 700;
+    }
+    .syllabus-description {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* 年度見出し */
+    .syllabus-year { margin-bottom: 32px; }
+    .syllabus-year-heading {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin: 0 0 12px;
+      color: var(--green);
+      font-size: 1.25rem;
+      line-height: 1.5;
+      font-weight: 700;
+    }
+    .syllabus-year-heading::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--line);
+    }
+    .syllabus-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .syllabus-grid li { min-width: 0; }
+
+    /* 学期ごとのカード */
+    .syllabus-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 12px;
+      height: 100%;
+      padding: 18px 20px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-left: 3px solid #7793a5;
+      border-radius: 8px;
+      color: var(--blue);
+      text-decoration: none;
+      transition: background-color 0.18s ease, border-color 0.18s ease;
+    }
+    .syllabus-card.spring { border-left-color: #879b80; }
+    .syllabus-card-season {
+      display: block;
+      color: var(--muted);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+    }
+    .syllabus-card-title {
+      display: block;
+      margin: 4px 0;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.55;
+      overflow-wrap: anywhere;
+    }
+    .syllabus-card-meta {
+      display: block;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+    .syllabus-arrow {
+      font-size: 1.4rem;
+      line-height: 1;
+    }
+    a.syllabus-card:hover {
+      border-color: #7793a5;
+      background-color: #f3f7f8;
+    }
+    a.syllabus-card.spring:hover { border-left-color: #879b80; }
+    a.syllabus-card:hover .syllabus-card-title {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+    .syllabus a:focus-visible {
+      outline: 3px solid var(--blue);
+      outline-offset: 3px;
+    }
+    .syllabus-card.pending {
+      background: #efede9;
+      border-left-color: #b4b4ad;
+      color: #555b55;
+    }
+
+    /* ホームへのリンク */
+    .syllabus-footer {
+      display: flex;
+      justify-content: flex-end;
+      border-top: 1px solid var(--line);
+      padding-top: 22px;
+    }
+    .syllabus .back-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 10px 20px;
+      border: 1px solid var(--blue);
+      background: var(--surface);
+      color: var(--blue);
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+    .syllabus .back-button:hover {
+      background-color: var(--blue);
+      color: #fff;
+    }
+
+    /* スマートフォンでは1列 */
+    @media (max-width: 600px) {
+      .syllabus { margin: 28px auto 40px; padding: 0 16px; }
+      .syllabus-grid { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+      .syllabus-card { padding: 14px 16px; }
+      .syllabus-year { margin-bottom: 26px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .syllabus-card, .syllabus .back-button { transition: none; }
+    }
   </style>
 </head>
 <body>
   <div id="header-container"></div>
 
+  <main class="syllabus">
+    <header class="syllabus-intro">
+      <p class="syllabus-eyebrow" lang="en">MORITA SEMINAR / SYLLABUS</p>
+      <h1>シラバス一覧</h1>
+      <p class="syllabus-description">以下のリンクから、各年度・学期のシラバスをご覧いただけます。</p>
+    </header>
+
+    <!-- 2026年度 -->
+    <section class="syllabus-year" aria-labelledby="year-2026">
+      <h2 class="syllabus-year-heading" id="year-2026">2026年度</h2>
+      <ul class="syllabus-grid">
+        <li>
+          <a class="syllabus-card autumn" href="Morita-Seminar-2026-Autom-syllabus.html">
+            <span>
+              <span class="syllabus-card-season" lang="en">AUTUMN / WINTER</span>
+              <span class="syllabus-card-title">2026年度 秋冬学期</span>
+              <span class="syllabus-card-meta">シラバスを見る</span>
+            </span>
+            <span class="syllabus-arrow" aria-hidden="true">›</span>
+          </a>
+        </li>
+        <li>
+          <a class="syllabus-card spring" href="Morita-Seminar-2026-Spring-syllabus.html">
+            <span>
+              <span class="syllabus-card-season" lang="en">SPRING / SUMMER</span>
+              <span class="syllabus-card-title">2026年度 春夏学期</span>
+              <span class="syllabus-card-meta">シラバスを見る</span>
+            </span>
+            <span class="syllabus-arrow" aria-hidden="true">›</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 2025年度 -->
+    <section class="syllabus-year" aria-labelledby="year-2025">
+      <h2 class="syllabus-year-heading" id="year-2025">2025年度</h2>
+      <ul class="syllabus-grid">
+        <li>
+          <a class="syllabus-card autumn" href="Morita-Seminar-2025-Autom-syllabus.html">
+            <span>
+              <span class="syllabus-card-season" lang="en">AUTUMN / WINTER</span>
+              <span class="syllabus-card-title">2025年度 秋冬学期</span>
+              <span class="syllabus-card-meta">シラバスを見る</span>
+            </span>
+            <span class="syllabus-arrow" aria-hidden="true">›</span>
+          </a>
+        </li>
+        <li>
+          <a class="syllabus-card spring" href="Morita-Seminar-2025-Spring-syllabus.html">
+            <span>
+              <span class="syllabus-card-season" lang="en">SPRING / SUMMER</span>
+              <span class="syllabus-card-title">2025年度 春夏学期</span>
+              <span class="syllabus-card-meta">シラバスを見る</span>
+            </span>
+            <span class="syllabus-arrow" aria-hidden="true">›</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 2024年度（準備中） -->
+    <section class="syllabus-year" aria-labelledby="year-2024">
+      <h2 class="syllabus-year-heading" id="year-2024">2024年度</h2>
+      <ul class="syllabus-grid">
+        <li>
+          <div class="syllabus-card pending">
+            <span>
+              <span class="syllabus-card-season" lang="en">AUTUMN / WINTER</span>
+              <span class="syllabus-card-title">2024年度 秋冬学期</span>
+              <span class="syllabus-card-meta">準備中</span>
+            </span>
+          </div>
+        </li>
+        <li>
+          <div class="syllabus-card pending">
+            <span>
+              <span class="syllabus-card-season" lang="en">SPRING / SUMMER</span>
+              <span class="syllabus-card-title">2024年度 春夏学期</span>
+              <span class="syllabus-card-meta">準備中</span>
+            </span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <footer class="syllabus-footer">
+      <a href="index.html" class="back-button"><span aria-hidden="true">←</span> ホームへ戻る</a>
+    </footer>
+  </main>
+
   <script>
+    // 共通ヘッダーの読み込み（既存の相対パスとIDを維持）
     fetch("header.html")
-      .then(res => res.text())
+      .then(res => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return res.text();
+      })
       .then(html => {
         document.getElementById("header-container").innerHTML = html;
 
-        const moritaToggle = document.getElementById('morita-toggle');
-        const pawaToggle = document.getElementById('pawa-toggle');
-        const moritaMenu = document.getElementById('morita-menu');
-        const pawaMenu = document.getElementById('pawa-menu');
+        const menus = [
+          { toggle: document.getElementById("morita-toggle"), menu: document.getElementById("morita-menu") },
+          { toggle: document.getElementById("pawa-toggle"), menu: document.getElementById("pawa-menu") }
+        ];
 
-        if (moritaToggle && pawaToggle && moritaMenu && pawaMenu) {
-          moritaToggle.addEventListener('click', () => {
-            moritaMenu.classList.toggle('open');
-            pawaMenu.classList.remove('open');
+        menus.forEach(({ toggle, menu }) => {
+          if (!toggle || !menu) return;
+          toggle.setAttribute("aria-controls", menu.id);
+          toggle.setAttribute("aria-expanded", String(menu.classList.contains("open")));
+          toggle.addEventListener("click", event => {
+            event.preventDefault();
+            const opening = !menu.classList.contains("open");
+            menus.forEach(item => {
+              if (!item.menu) return;
+              const active = item.menu === menu && opening;
+              item.menu.classList.toggle("open", active);
+              if (item.toggle) item.toggle.setAttribute("aria-expanded", String(active));
+            });
           });
-
-          pawaToggle.addEventListener('click', () => {
-            pawaMenu.classList.toggle('open');
-            moritaMenu.classList.remove('open');
-          });
-        }
-      });
+        });
+      })
+      .catch(error => console.warn("共通ヘッダーを読み込めませんでした。", error));
   </script>
-
-  <div class="content">
-    <h1>Syllabus　List</h1>
-    <p>以下のリンクから各年度のシラバスをご覧いただけます。</p>
-    <h2>2026年度</h2>
-    <ul>
-      <li><a href="Morita-Seminar-2026-Autom-syllabus.html">2026年度　秋冬学期</a></li>
-      <li><a href="Morita-Seminar-2026-Spring-syllabus.html">2026年度　春夏学期</a></li>
-    </ul>
-    <h2>2025年度</h2>
-    <ul>
-      <li><a href="Morita-Seminar-2025-Autom-syllabus.html">2025年度　秋冬学期</a></li>
-      <li><a href="Morita-Seminar-2025-Spring-syllabus.html">2025年度　春夏学期</a></li>
-    </ul>
-
-    <h2>その他の年度（準備中）</h2>
-    <ul>
-      <li>2024年度　秋冬学期</li>
-      <li>2024年度　春夏学期</li>
-    </ul>
-<p style="text-align: right;">
-  <a href="index.html" class="back-button">ホームへ戻る</a>
-</p>
-  </div>
 </body>
 </html>
